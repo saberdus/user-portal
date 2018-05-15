@@ -1,5 +1,10 @@
-INSERT INTO USER VALUES (1, 'thomas.mueller@bayern-muenchen.de', 'Thomas', 'Mueller', 'tMueller1', 'customer', 'tmueller');
-INSERT INTO USER VALUES (2, 'lionel.messi@barcelona.es', 'Lionel', 'Messi', 'tMessi123', 'customer', 'lmessi');
-INSERT INTO USER VALUES (3, 'paul.pogba@manchester-united.uk', 'Paul', 'Pogba', 'pPogba123', 'customer', 'ppogba');
-INSERT INTO USER VALUES (4, 'leroy.sane@manchester-city.uk', 'Leroy', 'Sane', 'lSane123', 'customer', 'lsane');
-INSERT INTO USER VALUES (5, 'saber.dridi@gmx.de', 'Saber', 'Dridi', 'SaberDridi', 'admin', 'saberdridi');
+INSERT INTO USER (id, username, password, role, firstname, lastname, email) VALUES
+  (1, 'tmueller', 'tMueller1', 'customer', 'Thomas', 'Mueller', 'thomas.mueller@bayern-muenchen.de');
+INSERT INTO USER (id, username, password, role, firstname, lastname, email) VALUES
+  (2, 'lmessi', 'tMessi123', 'customer', 'Lionel', 'Messi', 'lionel.messi@barcelona.es');
+INSERT INTO USER (id, username, password, role, firstname, lastname, email) VALUES
+  (3, 'ppogba', 'pPogba123', 'customer', 'Paul', 'Pogba', 'paul.pogba@manchester-united.uk');
+INSERT INTO USER (id, username, password, role, firstname, lastname, email) VALUES
+  (4, 'lsane', 'lSane123', 'customer', 'Leroy', 'Sane', 'leroy.sane@manchester-city.uk');
+INSERT INTO USER (id, username, password, role, firstname, lastname, email) VALUES
+  (5, 'saberdridi', 'SaberDridi', 'admin', 'Saber', 'Dridi', 'saber.dridi@gmx.de');

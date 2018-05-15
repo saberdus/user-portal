@@ -1,4 +1,4 @@
-package com.devglan.userportal;
+package com.github.userportal;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

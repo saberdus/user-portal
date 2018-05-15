@@ -1,8 +1,9 @@
-package com.devglan.userportal.service;
+package com.github.userportal.service.impl;
 
-import com.devglan.userportal.entity.User;
-import com.devglan.userportal.repository.UserRepository;
+import com.github.userportal.entity.User;
+import com.github.userportal.repository.UserRepository;
 
+import com.github.userportal.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.java.Log;
 

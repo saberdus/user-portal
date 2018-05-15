@@ -1,6 +1,6 @@
-package com.devglan.userportal.repository;
+package com.github.userportal.repository;
 
-import com.devglan.userportal.entity.User;
+import com.github.userportal.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

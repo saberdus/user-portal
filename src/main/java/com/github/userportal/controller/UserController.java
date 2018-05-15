@@ -1,7 +1,7 @@
-package com.devglan.userportal.controller;
+package com.github.userportal.controller;
 
-import com.devglan.userportal.entity.User;
-import com.devglan.userportal.service.UserService;
+import com.github.userportal.entity.User;
+import com.github.userportal.service.UserService;
 
 import lombok.RequiredArgsConstructor;
 
@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -29,20 +30,21 @@ public class UserController {
 
     private final UserService userService;
 
-    private String userRole;
-
     @PostMapping
+    @PreAuthorize("hasAuthority('ADMIN_USER')")
     public User createUser(@RequestBody User user) {
         LOGGER.info("Create user: "+user.getEMail());
         return userService.createUser(user);
     }
 
     @DeleteMapping("/{userId}")
+    @PreAuthorize("hasAuthority('ADMIN_USER')")
     public User deleteUser(@PathVariable("userId") int userId) {
         return userService.deleteUser(userId);
     }
 
     @PutMapping
+    @PreAuthorize("hasAuthority('ADMIN_USER')")
     public User updateUser(@RequestBody User user) {
         return userService.updateUser(user);
     }
@@ -53,11 +55,13 @@ public class UserController {
 //    }
 
     @GetMapping
+    @PreAuthorize("hasAuthority('ADMIN_USER')")
     public List<User> findAll() {
         return userService.findAll();
     }
 
     @GetMapping("/{eMail}")
+    @PreAuthorize("hasAuthority('ADMIN_USER')")
     public User findUser(@PathVariable("eMail") String eMail) {
         LOGGER.info("Value of user eMail: "+eMail);
 
@@ -69,6 +73,7 @@ public class UserController {
 
     @GetMapping("/{username}/{password}")
 //    @ResponseBody
+    @PreAuthorize("hasAuthority('ADMIN_USER') or hasAuthority('STANDARD_USER')")
     public User findLoggedUser(@PathVariable("username") String username,
                                      @PathVariable("password") String password) {
         LOGGER.info("Received login credentials: "+username+" & "+password);

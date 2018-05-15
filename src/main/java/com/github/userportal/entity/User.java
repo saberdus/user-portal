@@ -1,4 +1,4 @@
-package com.devglan.userportal.entity;
+package com.github.userportal.entity;
 
 import lombok.Data;
 
