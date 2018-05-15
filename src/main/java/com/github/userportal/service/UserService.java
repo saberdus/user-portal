@@ -1,6 +1,6 @@
-package com.devglan.userportal.service;
+package com.github.userportal.service;
 
-import com.devglan.userportal.entity.User;
+import com.github.userportal.entity.User;
 
 import java.util.List;
 

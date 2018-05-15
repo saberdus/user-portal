@@ -1,7 +1,7 @@
-package com.devglan.userportal.controller;
+package com.github.userportal.controller;
 
-import com.devglan.userportal.entity.User;
-import com.devglan.userportal.service.UserService;
+import com.github.userportal.entity.User;
+import com.github.userportal.service.UserService;
 
 import lombok.RequiredArgsConstructor;
 
